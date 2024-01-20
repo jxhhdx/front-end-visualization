@@ -1,5 +1,4 @@
 import { ProLayoutProps } from '@ant-design/pro-components';
-import logo from '../public/icons/logo.png'
 /**
  * @name
  */

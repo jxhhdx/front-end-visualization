@@ -1,18 +1,11 @@
 import { Footer } from '@/components';
 import { login } from '@/services/ant-design-pro/api';
-import { getFakeCaptcha } from '@/services/ant-design-pro/login';
 import {
-  AlipayCircleOutlined,
   LockOutlined,
-  MobileOutlined,
-  TaobaoCircleOutlined,
   UserOutlined,
-  WeiboCircleOutlined,
 } from '@ant-design/icons';
 import {
   LoginForm,
-  ProFormCaptcha,
-  ProFormCheckbox,
   ProFormText,
 } from '@ant-design/pro-components';
 import { FormattedMessage, history, SelectLang, useIntl, useModel, Helmet } from '@umijs/max';
@@ -160,7 +153,7 @@ const Login: React.FC = () => {
               maxWidth: '75vw',
               marginTop: '24px'
             }}
-            logo={<img alt="logo" src="/icons/logo.png" style={{ borderRadius: "4px" }} />}
+            logo={<img alt="logo" src={process.env.NODE_ENV === 'development' ? "/logo.png" : "/app_fe/logo.png"} style={{ borderRadius: "4px" }} />}
             title="Hungry Panda"
             // subTitle={intl.formatMessage({ id: 'pages.layouts.userLayout.title' })}
             initialValues={{
