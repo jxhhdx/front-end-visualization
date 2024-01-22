@@ -27,7 +27,6 @@ jobs:
     - name: Deploy to Aliyun Server
       run: |
         ls -al
-        scp -r ./public/*  ${{ secrets.ALISERVER_USERNAME }}@${{ secrets.ALISERVER_HOST }}:~/hello
 
       env:
         NODE_ENV: production
