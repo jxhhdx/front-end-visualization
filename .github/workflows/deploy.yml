@@ -25,9 +25,15 @@ jobs:
       run: npm run build
 
     - name: Deploy to Aliyun Server
-      run: |
-        scp -r ./dist/* ${{ secrets.ALISERVER_USERNAME }}@${{ secrets.ALISERVER_HOST }}:~/hello
-
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.ALISERVER_HOST }}
+        username: ${{ secrets.ALISERVER_USERNAME }}
+        password: ${{ secrets.ALISERVER_PASSWORD }}
+        port: ${{ secrets.ALISERVER_PORT }}
+        script: |
+          rm -rf ~/hello/*
+          scp -r ./dist/*  ${{ secrets.ALISERVER_USERNAME }}@${{ secrets.ALISERVER_HOST }}:~/hello
 
       env:
         NODE_ENV: production
