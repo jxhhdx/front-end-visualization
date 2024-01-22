@@ -1,0 +1,39 @@
+name: Deploy to Aliyun Server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 14
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Build
+      run: npm run build
+
+    - name: Deploy to Aliyun Server
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.ALISERVER_HOST }}
+        username: ${{ secrets.ALISERVER_USERNAME }}
+        password: ${{ secrets.ALISERVER_PASSWORD }}
+        script: |
+          cd /path/to/your/remote/directory
+          rm -rf *
+          scp -r ./dist/* .
+
+      env:
+        NODE_ENV: production
