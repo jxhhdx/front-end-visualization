@@ -1,6 +1,6 @@
 {
-  "name": "Hungrypanda",
-  "short_name": "Hungrypanda",
+  "name": "ExampleOrg",
+  "short_name": "ExampleOrg",
   "display": "standalone",
   "start_url": "./?utm_source=homescreen",
   "theme_color": "#002140",
