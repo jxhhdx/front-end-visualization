@@ -2,26 +2,39 @@ const fs = require('fs');
 const path = require('path');
 
 function generateTSXFile(fileName) {
+  const baseName = fileName.replaceAll(".tsx", "")
   const content = `import React from 'react';
-
+  
 interface Props {
   // Your props here
 }
 
-const ${fileName.replace('.tsx', '')}: React.FC<Props> = () => {
+const ${baseName}: React.FC<Props> = () => {
   // Your component code here
   return (
     <div>
-      <h1>${fileName.replace('.tsx', '')} Component</h1>
+      <h1>${baseName} Component</h1>
     </div>
   );
 };
-
-export default ${fileName.replace('.tsx', '')};
+${baseName}.displayName = '${baseName}'
+export default ${baseName};
 `;
 
   fs.writeFileSync(fileName, content);
   console.log(`${fileName} created successfully.`);
+}
+function formateName (str) {
+  return str.split("_").map((str) => `${str.slice(0,1).toUpperCase()}${str.slice(1).toLowerCase()}`).join("")
+}
+function generateRoute(paths, baseStr) {
+  const resultStr = paths.map((str) => ({
+    path: `/${str}`,
+    name: str,
+    component: `${baseStr}${formateName(str)}`
+  }))
+  fs.writeFileSync(`__routes__.json`, JSON.stringify(resultStr, null, 2));
+  console.log(`__routes__.json created successfully.`);
 }
 
 function main() {
@@ -60,10 +73,11 @@ function main() {
 
   for (let i = 0; i < numberOfFiles.length; i++) {
     const nameStr = numberOfFiles[i]
-    const sliceStr = nameStr.split("_").map((str) => `${str.slice(0,1).toUpperCase()}${str.slice(1).toLowerCase()}`).join("")
+    const sliceStr = formateName(nameStr)
     const fileName = `${sliceStr}.tsx`;
     generateTSXFile(fileName);
   }
+  generateRoute(numberOfFiles, './leran/')
 }
 
 main();
