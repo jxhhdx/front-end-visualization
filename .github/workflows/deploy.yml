@@ -33,7 +33,7 @@ jobs:
         port: ${{ secrets.ALISERVER_PORT }}
         script: |
           cd ~/hello
-          rm -rf *
+          rm -rf ~/hello/*
           scp -r ./dist/* .
 
       env:
