@@ -33,14 +33,14 @@ jobs:
         port: ${{ secrets.ALISERVER_PORT }}
         script: |
           rm -rf ~/hello/*
-    - name: Clear to Aliyun Server
+    - name: Deploy to Aliyun Server
       uses: appleboy/scp-action@v0.1.7
       with:
         host: ${{ secrets.ALISERVER_HOST }}
         username: ${{ secrets.ALISERVER_USERNAME }}
         password: ${{ secrets.ALISERVER_PASSWORD }}
         port: ${{ secrets.ALISERVER_PORT }}
-        source: public/*
+        source: ./public/*
         target: ~/hello
       
     env:
