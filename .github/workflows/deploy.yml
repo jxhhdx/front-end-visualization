@@ -36,10 +36,10 @@ jobs:
     - name: Clear to Aliyun Server
       uses: appleboy/scp-action@v0.1.7
       with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
-        port: ${{ secrets.PORT }}
+        host: ${{ secrets.ALISERVER_HOST }}
+        username: ${{ secrets.ALISERVER_USERNAME }}
+        password: ${{ secrets.ALISERVER_PASSWORD }}
+        port: ${{ secrets.ALISERVER_PORT }}
         source: public/*
         target: ~/hello
       
