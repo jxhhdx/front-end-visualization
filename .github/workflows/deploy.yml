@@ -32,7 +32,6 @@ jobs:
         password: ${{ secrets.ALISERVER_PASSWORD }}
         port: ${{ secrets.ALISERVER_PORT }}
         script: |
-          cd ~/hello
           rm -rf ~/hello/*
           scp -r ./dist/* .
 
