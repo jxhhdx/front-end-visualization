@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # - name: Checkout Repository
-    #   uses: actions/checkout@v2
+    - name: Checkout Repository
+      uses: actions/checkout@v2
 
     # - name: Set up Node.js
     #   uses: actions/setup-node@v3
@@ -24,9 +24,24 @@ jobs:
     # - name: Build
     #   run: npm run build
 
-    - name: Deploy to Aliyun Server
-      run: |
-        ls -al
-
-      env:
-        NODE_ENV: production
+    - name: Clear to Aliyun Server
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.ALISERVER_HOST }}
+        username: ${{ secrets.ALISERVER_USERNAME }}
+        password: ${{ secrets.ALISERVER_PASSWORD }}
+        port: ${{ secrets.ALISERVER_PORT }}
+        script: |
+          rm -rf ~/hello/*
+    - name: Clear to Aliyun Server
+      uses: appleboy/scp-action@v0.1.7
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        source: public/*
+        target: ~/hello
+      
+    env:
+      NODE_ENV: production
