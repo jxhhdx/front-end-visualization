@@ -27,10 +27,10 @@ jobs:
     - name: Deploy to Aliyun Server
       uses: appleboy/ssh-action@v1.0.3
       with:
-        host: ${{ secrets.s1.ALISERVER_HOST }}
-        username: ${{ secrets.s1.ALISERVER_USERNAME }}
-        password: ${{ secrets.s1.ALISERVER_PASSWORD }}
-        port: ${{ secrets.s1.ALISERVER_PORT }}
+        host: ${{ secrets.ALISERVER_HOST }}
+        username: ${{ secrets.ALISERVER_USERNAME }}
+        password: ${{ secrets.ALISERVER_PASSWORD }}
+        port: ${{ secrets.ALISERVER_PORT }}
         script: |
           whoami
         # cd /path/to/your/remote/directory
