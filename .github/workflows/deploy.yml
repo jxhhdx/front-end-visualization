@@ -40,7 +40,7 @@ jobs:
         username: ${{ secrets.ALISERVER_USERNAME }}
         password: ${{ secrets.ALISERVER_PASSWORD }}
         port: ${{ secrets.ALISERVER_PORT }}
-        source: ./public
+        source: public
         target: ~/hello
       
     env:
