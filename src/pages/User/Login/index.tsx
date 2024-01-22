@@ -130,7 +130,7 @@ const Login: React.FC = () => {
               marginTop: '24px'
             }}
             logo={<img alt="logo" src={isDev ? logo : "/app_fe/logo.png"} style={{ borderRadius: "4px" }} />}
-            title="Hungry Panda"
+            title="HungryPanda"
             // subTitle={intl.formatMessage({ id: 'pages.layouts.userLayout.title' })}
             initialValues={{
               autoLogin: true,
