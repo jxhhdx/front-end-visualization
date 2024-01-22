@@ -8,8 +8,9 @@ import {
   LoginForm,
   ProFormText,
 } from '@ant-design/pro-components';
-import { FormattedMessage, history, SelectLang, useIntl, useModel, Helmet } from '@umijs/max';
-import { Alert, message, Tabs } from 'antd';
+import { FormattedMessage, history, useIntl, useModel, Helmet } from '@umijs/max';
+import { message } from 'antd';
+import logo from '../../../../public/logo.png'
 import Settings from '../../../../config/defaultSettings';
 import React, { useState } from 'react';
 import { flushSync } from 'react-dom';
@@ -52,34 +53,10 @@ const useStyles = createStyles(({ token }) => {
   };
 });
 
-const Lang = () => {
-  const { styles } = useStyles();
-
-  return (
-    <div className={styles.lang} data-lang>
-      {SelectLang && <SelectLang />}
-    </div>
-  );
-};
-
-const LoginMessage: React.FC<{
-  content: string;
-}> = ({ content }) => {
-  return (
-    <Alert
-      style={{
-        marginBottom: 24,
-      }}
-      message={content}
-      type="error"
-      showIcon
-    />
-  );
-};
-
+const isDev = process.env.NODE_ENV === 'development'
 const Login: React.FC = () => {
-  const [userLoginState, setUserLoginState] = useState<API.LoginResult>({});
-  const [type, setType] = useState<string>('account');
+  const [, setUserLoginState] = useState<API.LoginResult>({});
+  const [type] = useState<string>('account');
   const { initialState, setInitialState } = useModel('@@initialState');
   const { styles } = useStyles();
   const intl = useIntl();
@@ -123,7 +100,7 @@ const Login: React.FC = () => {
       message.error(defaultLoginFailureMessage);
     }
   };
-  const { status, type: loginType } = userLoginState;
+  // const { status, type: loginType } = userLoginState;
 
   return (
     <div className={styles.container}>
@@ -136,7 +113,6 @@ const Login: React.FC = () => {
           - {Settings.title}
         </title>
       </Helmet>
-      <Lang />
       <div
         style={{
           flex: '1',
@@ -153,7 +129,7 @@ const Login: React.FC = () => {
               maxWidth: '75vw',
               marginTop: '24px'
             }}
-            logo={<img alt="logo" src={process.env.NODE_ENV === 'development' ? "/logo.png" : "/app_fe/logo.png"} style={{ borderRadius: "4px" }} />}
+            logo={<img alt="logo" src={isDev ? logo : "/app_fe/logo.png"} style={{ borderRadius: "4px" }} />}
             title="Hungry Panda"
             // subTitle={intl.formatMessage({ id: 'pages.layouts.userLayout.title' })}
             initialValues={{

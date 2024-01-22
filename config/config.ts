@@ -7,7 +7,9 @@ import routes from './routes';
 
 const { REACT_APP_ENV = 'dev' } = process.env;
 
-const PUBLIC_PATH = "/app_fe/"
+export const PUBLIC_PATH = "/app_fe/"
+
+export const SUFFIX = process.env.NODE_ENV === 'development' ? '/' : PUBLIC_PATH
 
 export default defineConfig({
 
@@ -133,7 +135,7 @@ export default defineConfig({
   headScripts: [
     // 解决首次加载时白屏的问题
     { 
-      src: (process.env.NODE_ENV === 'development' ? '/' : PUBLIC_PATH) + 'loading.js', 
+      src: `${SUFFIX}loading.js`, 
       async: true 
     },
   ],
