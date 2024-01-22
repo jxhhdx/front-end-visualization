@@ -7,8 +7,7 @@ const Settings: ProLayoutProps & {
   logo?: string;
 } = {
   navTheme: 'light',
-  // 拂晓蓝
-  colorPrimary: '#FFDB00',
+  // colorPrimary: '#FFDB00',
   layout: 'mix',
   contentWidth: 'Fluid',
   fixedHeader: false,

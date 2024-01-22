@@ -121,7 +121,7 @@ const Login: React.FC = () => {
       >
         <ConfigProvider
           prefixCls="panda"
-          theme={{ token: { colorPrimary: '#FFDB00' } }}
+          theme={{ token: {  } }}
         >
           <LoginForm
             contentStyle={{
