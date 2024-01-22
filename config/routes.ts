@@ -52,6 +52,18 @@ export default [
     component: './TableList',
   },
   {
+    path: '/learn',
+    name: 'learn',
+    icon: 'borderlessTable',
+    // routes: [
+    //   {
+    //     path: '/admin/sub-page',
+    //     name: 'sub-page',
+    //     component: './Admin',
+    //   },
+    // ],
+  },
+  {
     path: '/',
     redirect: '/welcome',
   },
