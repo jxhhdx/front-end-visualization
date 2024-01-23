@@ -1,10 +1,11 @@
 import React from 'react';
   
-interface Props {
-  // Your props here
+export interface ThreeR3fProps {
+  value: string
+  onChange: () => void
 }
 
-const ThreeR3f: React.FC<Props> = () => {
+const ThreeR3f: React.FC<ThreeR3fProps> = () => {
   // Your component code here
   return (
     <div>

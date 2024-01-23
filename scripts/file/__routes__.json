@@ -1,0 +1,157 @@
+[
+  {
+    "path": "/css_higher",
+    "name": "css_higher",
+    "component": "./Learn/CssHigher"
+  },
+  {
+    "path": "/css_2d",
+    "name": "css_2d",
+    "component": "./Learn/Css2d"
+  },
+  {
+    "path": "/css_3d",
+    "name": "css_3d",
+    "component": "./Learn/Css3d"
+  },
+  {
+    "path": "/svg_basic",
+    "name": "svg_basic",
+    "component": "./Learn/SvgBasic"
+  },
+  {
+    "path": "/svg_edit",
+    "name": "svg_edit",
+    "component": "./Learn/SvgEdit"
+  },
+  {
+    "path": "/svg_mind",
+    "name": "svg_mind",
+    "component": "./Learn/SvgMind"
+  },
+  {
+    "path": "/d3_zhu",
+    "name": "d3_zhu",
+    "component": "./Learn/D3Zhu"
+  },
+  {
+    "path": "/d3_zhe",
+    "name": "d3_zhe",
+    "component": "./Learn/D3Zhe"
+  },
+  {
+    "path": "/d3_pi",
+    "name": "d3_pi",
+    "component": "./Learn/D3Pi"
+  },
+  {
+    "path": "/d3_leida",
+    "name": "d3_leida",
+    "component": "./Learn/D3Leida"
+  },
+  {
+    "path": "/canvas_html5",
+    "name": "canvas_html5",
+    "component": "./Learn/CanvasHtml5"
+  },
+  {
+    "path": "/canvas_dx",
+    "name": "canvas_dx",
+    "component": "./Learn/CanvasDx"
+  },
+  {
+    "path": "/canvas_0_1_zhu_and_pi",
+    "name": "canvas_0_1_zhu_and_pi",
+    "component": "./Learn/Canvas01ZhuAndPi"
+  },
+  {
+    "path": "/canvas_0_1_k_line",
+    "name": "canvas_0_1_k_line",
+    "component": "./Learn/Canvas01KLine"
+  },
+  {
+    "path": "/canvas_edit",
+    "name": "canvas_edit",
+    "component": "./Learn/CanvasEdit"
+  },
+  {
+    "path": "/canvas_h5_game",
+    "name": "canvas_h5_game",
+    "component": "./Learn/CanvasH5Game"
+  },
+  {
+    "path": "/canvas_juanzou_game",
+    "name": "canvas_juanzou_game",
+    "component": "./Learn/CanvasJuanzouGame"
+  },
+  {
+    "path": "/three_sample_game",
+    "name": "three_sample_game",
+    "component": "./Learn/ThreeSampleGame"
+  },
+  {
+    "path": "/three_gaoji_caizhi",
+    "name": "three_gaoji_caizhi",
+    "component": "./Learn/ThreeGaojiCaizhi"
+  },
+  {
+    "path": "/three_mini_echart_bar3d",
+    "name": "three_mini_echart_bar3d",
+    "component": "./Learn/ThreeMiniEchartBar3d"
+  },
+  {
+    "path": "/three_3d_jianmo",
+    "name": "three_3d_jianmo",
+    "component": "./Learn/Three3dJianmo"
+  },
+  {
+    "path": "/three_r3f",
+    "name": "three_r3f",
+    "component": "./Learn/ThreeR3f"
+  },
+  {
+    "path": "/shader_glsl",
+    "name": "shader_glsl",
+    "component": "./Learn/ShaderGlsl"
+  },
+  {
+    "path": "/shader_tu_and_func",
+    "name": "shader_tu_and_func",
+    "component": "./Learn/ShaderTuAndFunc"
+  },
+  {
+    "path": "/shader_ramdom",
+    "name": "shader_ramdom",
+    "component": "./Learn/ShaderRamdom"
+  },
+  {
+    "path": "/shader_ray_sdf",
+    "name": "shader_ray_sdf",
+    "component": "./Learn/ShaderRaySdf"
+  },
+  {
+    "path": "/shader_gaoji_donghua",
+    "name": "shader_gaoji_donghua",
+    "component": "./Learn/ShaderGaojiDonghua"
+  },
+  {
+    "path": "/webgl_basic",
+    "name": "webgl_basic",
+    "component": "./Learn/WebglBasic"
+  },
+  {
+    "path": "/weggl_gl_jz",
+    "name": "weggl_gl_jz",
+    "component": "./Learn/WegglGlJz"
+  },
+  {
+    "path": "/webgc_uv",
+    "name": "webgc_uv",
+    "component": "./Learn/WebgcUv"
+  },
+  {
+    "path": "/webgl_phong",
+    "name": "webgl_phong",
+    "component": "./Learn/WebglPhong"
+  }
+]

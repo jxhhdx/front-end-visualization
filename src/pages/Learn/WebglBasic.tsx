@@ -1,10 +1,11 @@
 import React from 'react';
   
-interface Props {
-  // Your props here
+export interface WebglBasicProps {
+  value: string
+  onChange: () => void
 }
 
-const WebglBasic: React.FC<Props> = () => {
+const WebglBasic: React.FC<WebglBasicProps> = () => {
   // Your component code here
   return (
     <div>

@@ -1,10 +1,11 @@
 import React from 'react';
   
-interface Props {
-  // Your props here
+export interface ShaderGlslProps {
+  value: string
+  onChange: () => void
 }
 
-const ShaderGlsl: React.FC<Props> = () => {
+const ShaderGlsl: React.FC<ShaderGlslProps> = () => {
   // Your component code here
   return (
     <div>

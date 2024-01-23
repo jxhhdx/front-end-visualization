@@ -5,11 +5,12 @@ function generateTSXFile(fileName) {
   const baseName = fileName.replaceAll(".tsx", "")
   const content = `import React from 'react';
   
-interface Props {
-  // Your props here
+export interface ${baseName}Props {
+  value: string
+  onChange: () => void
 }
 
-const ${baseName}: React.FC<Props> = () => {
+const ${baseName}: React.FC<${baseName}Props> = () => {
   // Your component code here
   return (
     <div>
@@ -39,6 +40,7 @@ function generateRoute(paths, baseStr) {
 
 function main() {
   const numberOfFiles = [
+    "css_higher",
     "css_2d",
     "css_3d",
     "svg_basic",
@@ -77,7 +79,7 @@ function main() {
     const fileName = `${sliceStr}.tsx`;
     generateTSXFile(fileName);
   }
-  generateRoute(numberOfFiles, './leran/')
+  generateRoute(numberOfFiles, './Learn/')
 }
 
 main();

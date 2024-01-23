@@ -1,10 +1,11 @@
 import React from 'react';
   
-interface Props {
-  // Your props here
+export interface SvgMindProps {
+  value: string
+  onChange: () => void
 }
 
-const SvgMind: React.FC<Props> = () => {
+const SvgMind: React.FC<SvgMindProps> = () => {
   // Your component code here
   return (
     <div>

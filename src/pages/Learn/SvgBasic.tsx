@@ -1,10 +1,11 @@
 import React from 'react';
   
-interface Props {
-  // Your props here
+export interface SvgBasicProps {
+  value: string
+  onChange: () => void
 }
 
-const SvgBasic: React.FC<Props> = () => {
+const SvgBasic: React.FC<SvgBasicProps> = () => {
   // Your component code here
   return (
     <div>

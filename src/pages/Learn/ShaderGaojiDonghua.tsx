@@ -1,10 +1,11 @@
 import React from 'react';
   
-interface Props {
-  // Your props here
+export interface ShaderGaojiDonghuaProps {
+  value: string
+  onChange: () => void
 }
 
-const ShaderGaojiDonghua: React.FC<Props> = () => {
+const ShaderGaojiDonghua: React.FC<ShaderGaojiDonghuaProps> = () => {
   // Your component code here
   return (
     <div>

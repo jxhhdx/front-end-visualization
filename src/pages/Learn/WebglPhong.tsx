@@ -1,10 +1,11 @@
 import React from 'react';
   
-interface Props {
-  // Your props here
+export interface WebglPhongProps {
+  value: string
+  onChange: () => void
 }
 
-const WebglPhong: React.FC<Props> = () => {
+const WebglPhong: React.FC<WebglPhongProps> = () => {
   // Your component code here
   return (
     <div>

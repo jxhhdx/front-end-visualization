@@ -1,10 +1,11 @@
 import React from 'react';
   
-interface Props {
-  // Your props here
+export interface ThreeMiniEchartBar3dProps {
+  value: string
+  onChange: () => void
 }
 
-const ThreeMiniEchartBar3d: React.FC<Props> = () => {
+const ThreeMiniEchartBar3d: React.FC<ThreeMiniEchartBar3dProps> = () => {
   // Your component code here
   return (
     <div>

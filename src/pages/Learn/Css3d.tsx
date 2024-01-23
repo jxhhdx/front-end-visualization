@@ -1,10 +1,11 @@
 import React from 'react';
   
-interface Props {
-  // Your props here
+export interface Css3dProps {
+  value: string
+  onChange: () => void
 }
 
-const Css3d: React.FC<Props> = () => {
+const Css3d: React.FC<Css3dProps> = () => {
   // Your component code here
   return (
     <div>

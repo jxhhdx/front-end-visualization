@@ -1,10 +1,11 @@
 import React from 'react';
   
-interface Props {
-  // Your props here
+export interface D3ZhuProps {
+  value: string
+  onChange: () => void
 }
 
-const D3Zhu: React.FC<Props> = () => {
+const D3Zhu: React.FC<D3ZhuProps> = () => {
   // Your component code here
   return (
     <div>

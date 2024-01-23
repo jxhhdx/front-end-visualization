@@ -1,10 +1,11 @@
 import React from 'react';
   
-interface Props {
-  // Your props here
+export interface ThreeGaojiCaizhiProps {
+  value: string
+  onChange: () => void
 }
 
-const ThreeGaojiCaizhi: React.FC<Props> = () => {
+const ThreeGaojiCaizhi: React.FC<ThreeGaojiCaizhiProps> = () => {
   // Your component code here
   return (
     <div>

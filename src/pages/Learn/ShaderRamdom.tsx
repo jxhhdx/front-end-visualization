@@ -1,10 +1,11 @@
 import React from 'react';
   
-interface Props {
-  // Your props here
+export interface ShaderRamdomProps {
+  value: string
+  onChange: () => void
 }
 
-const ShaderRamdom: React.FC<Props> = () => {
+const ShaderRamdom: React.FC<ShaderRamdomProps> = () => {
   // Your component code here
   return (
     <div>

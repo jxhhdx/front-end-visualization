@@ -1,10 +1,11 @@
 import React from 'react';
   
-interface Props {
-  // Your props here
+export interface Canvas01ZhuAndPiProps {
+  value: string
+  onChange: () => void
 }
 
-const Canvas01ZhuAndPi: React.FC<Props> = () => {
+const Canvas01ZhuAndPi: React.FC<Canvas01ZhuAndPiProps> = () => {
   // Your component code here
   return (
     <div>

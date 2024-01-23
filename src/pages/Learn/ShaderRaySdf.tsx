@@ -1,10 +1,11 @@
 import React from 'react';
   
-interface Props {
-  // Your props here
+export interface ShaderRaySdfProps {
+  value: string
+  onChange: () => void
 }
 
-const ShaderRaySdf: React.FC<Props> = () => {
+const ShaderRaySdf: React.FC<ShaderRaySdfProps> = () => {
   // Your component code here
   return (
     <div>

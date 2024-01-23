@@ -1,10 +1,11 @@
 import React from 'react';
   
-interface Props {
-  // Your props here
+export interface D3LeidaProps {
+  value: string
+  onChange: () => void
 }
 
-const D3Leida: React.FC<Props> = () => {
+const D3Leida: React.FC<D3LeidaProps> = () => {
   // Your component code here
   return (
     <div>

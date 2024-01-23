@@ -1,10 +1,11 @@
 import React from 'react';
   
-interface Props {
-  // Your props here
+export interface WebgcUvProps {
+  value: string
+  onChange: () => void
 }
 
-const WebgcUv: React.FC<Props> = () => {
+const WebgcUv: React.FC<WebgcUvProps> = () => {
   // Your component code here
   return (
     <div>

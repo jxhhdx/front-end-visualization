@@ -1,10 +1,11 @@
 import React from 'react';
   
-interface Props {
-  // Your props here
+export interface SvgEditProps {
+  value: string
+  onChange: () => void
 }
 
-const SvgEdit: React.FC<Props> = () => {
+const SvgEdit: React.FC<SvgEditProps> = () => {
   // Your component code here
   return (
     <div>

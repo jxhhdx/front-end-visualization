@@ -1,10 +1,11 @@
 import React from 'react';
   
-interface Props {
-  // Your props here
+export interface ThreeSampleGameProps {
+  value: string
+  onChange: () => void
 }
 
-const ThreeSampleGame: React.FC<Props> = () => {
+const ThreeSampleGame: React.FC<ThreeSampleGameProps> = () => {
   // Your component code here
   return (
     <div>

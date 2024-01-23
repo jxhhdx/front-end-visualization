@@ -1,10 +1,11 @@
 import React from 'react';
   
-interface Props {
-  // Your props here
+export interface D3PiProps {
+  value: string
+  onChange: () => void
 }
 
-const D3Pi: React.FC<Props> = () => {
+const D3Pi: React.FC<D3PiProps> = () => {
   // Your component code here
   return (
     <div>

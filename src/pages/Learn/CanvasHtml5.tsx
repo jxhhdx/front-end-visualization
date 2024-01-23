@@ -1,10 +1,11 @@
 import React from 'react';
   
-interface Props {
-  // Your props here
+export interface CanvasHtml5Props {
+  value: string
+  onChange: () => void
 }
 
-const CanvasHtml5: React.FC<Props> = () => {
+const CanvasHtml5: React.FC<CanvasHtml5Props> = () => {
   // Your component code here
   return (
     <div>

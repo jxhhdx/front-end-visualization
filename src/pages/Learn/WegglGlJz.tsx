@@ -1,10 +1,11 @@
 import React from 'react';
   
-interface Props {
-  // Your props here
+export interface WegglGlJzProps {
+  value: string
+  onChange: () => void
 }
 
-const WegglGlJz: React.FC<Props> = () => {
+const WegglGlJz: React.FC<WegglGlJzProps> = () => {
   // Your component code here
   return (
     <div>

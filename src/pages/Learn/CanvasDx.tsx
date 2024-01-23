@@ -1,10 +1,11 @@
 import React from 'react';
   
-interface Props {
-  // Your props here
+export interface CanvasDxProps {
+  value: string
+  onChange: () => void
 }
 
-const CanvasDx: React.FC<Props> = () => {
+const CanvasDx: React.FC<CanvasDxProps> = () => {
   // Your component code here
   return (
     <div>

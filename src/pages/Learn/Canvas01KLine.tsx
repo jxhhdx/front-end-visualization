@@ -1,10 +1,11 @@
 import React from 'react';
   
-interface Props {
-  // Your props here
+export interface Canvas01KLineProps {
+  value: string
+  onChange: () => void
 }
 
-const Canvas01KLine: React.FC<Props> = () => {
+const Canvas01KLine: React.FC<Canvas01KLineProps> = () => {
   // Your component code here
   return (
     <div>

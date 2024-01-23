@@ -1,10 +1,11 @@
 import React from 'react';
   
-interface Props {
-  // Your props here
+export interface ShaderTuAndFuncProps {
+  value: string
+  onChange: () => void
 }
 
-const ShaderTuAndFunc: React.FC<Props> = () => {
+const ShaderTuAndFunc: React.FC<ShaderTuAndFuncProps> = () => {
   // Your component code here
   return (
     <div>

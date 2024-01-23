@@ -1,10 +1,11 @@
 import React from 'react';
   
-interface Props {
-  // Your props here
+export interface Three3dJianmoProps {
+  value: string
+  onChange: () => void
 }
 
-const Three3dJianmo: React.FC<Props> = () => {
+const Three3dJianmo: React.FC<Three3dJianmoProps> = () => {
   // Your component code here
   return (
     <div>

@@ -1,10 +1,11 @@
 import React from 'react';
   
-interface Props {
-  // Your props here
+export interface CanvasEditProps {
+  value: string
+  onChange: () => void
 }
 
-const CanvasEdit: React.FC<Props> = () => {
+const CanvasEdit: React.FC<CanvasEditProps> = () => {
   // Your component code here
   return (
     <div>
